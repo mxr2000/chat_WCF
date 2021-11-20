@@ -1,0 +1,6 @@
+D:\Programs\csharp\wpf\Chat\Contracts\bin\Debug\Contracts.dll
+D:\Programs\csharp\wpf\Chat\Contracts\bin\Debug\Contracts.pdb
+D:\Programs\csharp\wpf\Chat\Contracts\obj\Debug\Contracts.csprojAssemblyReference.cache
+D:\Programs\csharp\wpf\Chat\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+D:\Programs\csharp\wpf\Chat\Contracts\obj\Debug\Contracts.dll
+D:\Programs\csharp\wpf\Chat\Contracts\obj\Debug\Contracts.pdb

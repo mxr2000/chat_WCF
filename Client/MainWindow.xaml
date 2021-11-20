@@ -1,0 +1,63 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        xmlns:contracts="clr-namespace:Contracts;assembly=Contracts"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <MenuItem Header="File">
+                <MenuItem Header="New"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            
+        </ToolBar>
+        <TabControl Grid.Column="0" Grid.Row="2" Grid.RowSpan="4">
+            <TabItem Header="Contacts">
+                <TreeView Name="tvContacts">
+                    <TreeView.Resources>
+                        <HierarchicalDataTemplate DataType="{x:Type contracts:ContactGroup}" ItemsSource="{Binding Members}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Resources/Images/contact_group.png" Margin="0 0 5 0"/>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Name}"/>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                        <DataTemplate DataType="{x:Type contracts:Contact}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Resources/Images/contact_online.png" Margin="0 0 5 0"/>
+                                <TextBlock Text="{Binding Name}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </TreeView.Resources>
+                </TreeView>
+            </TabItem>
+            <TabItem Header="Chats">
+                
+            </TabItem>
+        </TabControl>
+        <ListBox Grid.Column="1" Grid.Row="2"></ListBox>
+        <ToolBar Grid.Column="1" Grid.Row="3">
+            <Button>Dick</Button>
+        </ToolBar>
+        <TextBox Grid.Column="1" Grid.Row="4"></TextBox>
+        <ToolBar Grid.Column="1" Grid.Row="5">
+            <Button>Dick</Button>
+        </ToolBar>
+    </Grid>
+</Window>
